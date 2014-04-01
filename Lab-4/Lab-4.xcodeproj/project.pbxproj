@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95BF88DC18EB2F3600CC9130 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF88DB18EB2F3600CC9130 /* main.cpp */; };
-		95BF88DE18EB2F3600CC9130 /* Lab_4.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95BF88DD18EB2F3600CC9130 /* Lab_4.1 */; };
+		95BF88ED18EB2FBA00CC9130 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF88E618EB2FBA00CC9130 /* main.cpp */; };
+		95BF88EE18EB2FBA00CC9130 /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF88E718EB2FBA00CC9130 /* Print.cpp */; };
+		95BF88EF18EB2FBA00CC9130 /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF88E918EB2FBA00CC9130 /* Scanner.cpp */; };
+		95BF88F018EB2FBA00CC9130 /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF88EB18EB2FBA00CC9130 /* Token.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +20,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				95BF88DE18EB2F3600CC9130 /* Lab_4.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -26,8 +27,15 @@
 
 /* Begin PBXFileReference section */
 		95BF88D818EB2F3600CC9130 /* Lab-4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lab-4"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95BF88DB18EB2F3600CC9130 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		95BF88DD18EB2F3600CC9130 /* Lab_4.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Lab_4.1; sourceTree = "<group>"; };
+		95BF88E518EB2FBA00CC9130 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = ../cse220_lab4/common.h; sourceTree = "<group>"; };
+		95BF88E618EB2FBA00CC9130 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../cse220_lab4/main.cpp; sourceTree = "<group>"; };
+		95BF88E718EB2FBA00CC9130 /* Print.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Print.cpp; path = ../cse220_lab4/Print.cpp; sourceTree = "<group>"; };
+		95BF88E818EB2FBA00CC9130 /* Print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Print.h; path = ../cse220_lab4/Print.h; sourceTree = "<group>"; };
+		95BF88E918EB2FBA00CC9130 /* Scanner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scanner.cpp; path = ../cse220_lab4/Scanner.cpp; sourceTree = "<group>"; };
+		95BF88EA18EB2FBA00CC9130 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scanner.h; path = ../cse220_lab4/Scanner.h; sourceTree = "<group>"; };
+		95BF88EB18EB2FBA00CC9130 /* Token.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Token.cpp; path = ../cse220_lab4/Token.cpp; sourceTree = "<group>"; };
+		95BF88EC18EB2FBA00CC9130 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Token.h; path = ../cse220_lab4/Token.h; sourceTree = "<group>"; };
+		95BF88F218EB306500CC9130 /* Lab_4.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = Lab_4.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +52,7 @@
 		95BF88CF18EB2F3600CC9130 = {
 			isa = PBXGroup;
 			children = (
-				95BF88DA18EB2F3600CC9130 /* Lab-4 */,
+				95BF88F118EB306500CC9130 /* Lab-4 */,
 				95BF88D918EB2F3600CC9130 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,11 +65,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95BF88DA18EB2F3600CC9130 /* Lab-4 */ = {
+		95BF88F118EB306500CC9130 /* Lab-4 */ = {
 			isa = PBXGroup;
 			children = (
-				95BF88DB18EB2F3600CC9130 /* main.cpp */,
-				95BF88DD18EB2F3600CC9130 /* Lab_4.1 */,
+				95BF88E518EB2FBA00CC9130 /* common.h */,
+				95BF88E618EB2FBA00CC9130 /* main.cpp */,
+				95BF88E718EB2FBA00CC9130 /* Print.cpp */,
+				95BF88E818EB2FBA00CC9130 /* Print.h */,
+				95BF88E918EB2FBA00CC9130 /* Scanner.cpp */,
+				95BF88EA18EB2FBA00CC9130 /* Scanner.h */,
+				95BF88EB18EB2FBA00CC9130 /* Token.cpp */,
+				95BF88EC18EB2FBA00CC9130 /* Token.h */,
+				95BF88F218EB306500CC9130 /* Lab_4.1 */,
 			);
 			path = "Lab-4";
 			sourceTree = "<group>";
@@ -117,7 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BF88DC18EB2F3600CC9130 /* main.cpp in Sources */,
+				95BF88EF18EB2FBA00CC9130 /* Scanner.cpp in Sources */,
+				95BF88ED18EB2FBA00CC9130 /* main.cpp in Sources */,
+				95BF88EE18EB2FBA00CC9130 /* Print.cpp in Sources */,
+				95BF88F018EB2FBA00CC9130 /* Token.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
