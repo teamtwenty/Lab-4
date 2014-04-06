@@ -9,11 +9,11 @@
 
 Token::Token()
 {
-    //What code do I need here to initialize everything.
+    Token newToken;//What code do I need here to initialize everything.
 }
 Token::~Token()
 {
-    //What code do I need here to free memory
+    delete this; //What code do I need here to free memory
 }
 void Token::setCode(TokenCode newCode)
 {

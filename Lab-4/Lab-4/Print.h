@@ -4,7 +4,6 @@
 //
 //  Created by Bryce Holton.
 //
-
 #ifndef __Lab4__Print__
 #define __Lab4__Print__
 
