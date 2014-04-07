@@ -11,6 +11,7 @@
 		95BF890818EB313800CC9130 /* Print.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF890118EB313800CC9130 /* Print.cpp */; };
 		95BF890918EB313800CC9130 /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF890318EB313800CC9130 /* Scanner.cpp */; };
 		95BF890A18EB313800CC9130 /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF890518EB313800CC9130 /* Token.cpp */; };
+		95D03FC118F15369006EEC84 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95D03FC018F15369006EEC84 /* Tree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,8 @@
 		95BF890418EB313800CC9130 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
 		95BF890518EB313800CC9130 /* Token.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Token.cpp; sourceTree = "<group>"; };
 		95BF890618EB313800CC9130 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
+		95D03FBF18F1505D006EEC84 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		95D03FC018F15369006EEC84 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				95BF890418EB313800CC9130 /* Scanner.h */,
 				95BF890518EB313800CC9130 /* Token.cpp */,
 				95BF890618EB313800CC9130 /* Token.h */,
+				95D03FBF18F1505D006EEC84 /* Tree.h */,
+				95D03FC018F15369006EEC84 /* Tree.cpp */,
 				95BF88F218EB306500CC9130 /* Lab_4.1 */,
 			);
 			path = "Lab-4";
@@ -136,6 +141,7 @@
 				95BF890718EB313800CC9130 /* main.cpp in Sources */,
 				95BF890818EB313800CC9130 /* Print.cpp in Sources */,
 				95BF890A18EB313800CC9130 /* Token.cpp in Sources */,
+				95D03FC118F15369006EEC84 /* Tree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +251,7 @@
 				95BF88E318EB2F3600CC9130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
