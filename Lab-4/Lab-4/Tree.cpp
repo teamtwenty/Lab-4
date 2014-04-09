@@ -7,70 +7,67 @@
 //
 
 #include "Tree.h"
+#include "Token.h"
 
 
 Tree::Tree()
 {
-    root =NULL;
+    root = NULL;
 }
 Tree::~Tree()
 {
-    ClearTree(root);
+    recursiveDeleteTree(root);
 }
-void Tree::ClearTree(treeNode *T)
+void Tree::recursiveDeleteTree(treeNode *node)
 {
-    if(T==NULL) return;  // Nothing to clear
-    if(T->left != NULL) ClearTree(T->left); // Clear left sub-tree
-    if(T->right != NULL) ClearTree(T->right); // Clear right sub-tree
-    delete T;    // Destroy this node
+    if(node->left!=NULL)
+        recursiveDeleteTree(node->left);// clear left node
+    if(node->right!= NULL)
+        recursiveDeleteTree(node->right);// Clear right node
+    delete node;    // Destroy this node
 }
 bool Tree::isEmpty()
 {
     return(root==NULL);
 }
-treeNode *Tree::SearchTree(int Key)
+
+void Tree::addNode(Token *newToken)
 {
-   // int      ValueInTree = false;
-    treeNode *temp;
     
-    temp = root;
-    while((temp != NULL) && (temp->Key != Key))
+    if(root == NULL)
     {
-        if(Key < temp->Key)
-            temp = temp->left;  // Search key comes before this node.
-        else
-            temp = temp->right; // Search key comes after this node
+        root->data = newToken;
     }
-    if(temp == NULL) return temp;    // Search key not found
     else
-        return temp;    // Found it so return a duplicate
-}
-int Tree::Insert(treeNode *newNode)
-{
-    treeNode *temp;
-    treeNode *back;
-    
-    temp = root;
-    back = NULL;
-    
-    while(temp != NULL) // Loop till temp falls out of the tree
     {
-        back = temp;
-        if(newNode->Key < temp->Key)
-            temp = temp->left;
-        else
-            temp = temp->right;
+        treeNode *current = root;
+        while(current != NULL)
+        {
+            if(newToken->getTokenString().compare(current->data->getTokenString()))
+            {
+                if(current->left != NULL)
+                {
+                    current = current->left;
+                }
+                else
+                {
+                    current->left->data = newToken;
+                    current = NULL;
+                }
+            }
+            else
+            {
+                if(current->right != NULL)
+                {
+                    current = current->right;
+                }
+                else
+                {
+                    current->right->data = newToken;
+                    current = NULL;
+                }
+            }
+        }
     }
-    
     // Now attach the new node to the node that back points to
-    if(back == NULL) // Attach as root node in a new tree
-        root = newNode;
-    else
-    {
-        if(newNode->Key < back->Key)
-            back->left = newNode;
-        else
-            back->right = newNode;
-    }
-    return(true);
 }

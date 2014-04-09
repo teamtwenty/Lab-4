@@ -12,6 +12,7 @@
 		95BF890918EB313800CC9130 /* Scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF890318EB313800CC9130 /* Scanner.cpp */; };
 		95BF890A18EB313800CC9130 /* Token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95BF890518EB313800CC9130 /* Token.cpp */; };
 		95D03FC118F15369006EEC84 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95D03FC018F15369006EEC84 /* Tree.cpp */; };
+		95DC8DB018F4A98400D40F25 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95DC8DAE18F4A98400D40F25 /* LinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		95BF890618EB313800CC9130 /* Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Token.h; sourceTree = "<group>"; };
 		95D03FBF18F1505D006EEC84 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		95D03FC018F15369006EEC84 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
+		95DC8DAE18F4A98400D40F25 /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		95DC8DAF18F4A98400D40F25 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				95BF890618EB313800CC9130 /* Token.h */,
 				95D03FBF18F1505D006EEC84 /* Tree.h */,
 				95D03FC018F15369006EEC84 /* Tree.cpp */,
+				95DC8DAF18F4A98400D40F25 /* LinkedList.h */,
+				95DC8DAE18F4A98400D40F25 /* LinkedList.cpp */,
 				95BF88F218EB306500CC9130 /* Lab_4.1 */,
 			);
 			path = "Lab-4";
@@ -141,6 +146,7 @@
 				95BF890718EB313800CC9130 /* main.cpp in Sources */,
 				95BF890818EB313800CC9130 /* Print.cpp in Sources */,
 				95BF890A18EB313800CC9130 /* Token.cpp in Sources */,
+				95DC8DB018F4A98400D40F25 /* LinkedList.cpp in Sources */,
 				95D03FC118F15369006EEC84 /* Tree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

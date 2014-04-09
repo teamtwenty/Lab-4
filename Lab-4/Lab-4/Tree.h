@@ -12,11 +12,13 @@
 #include <iostream>
 #include "common.h"
 #include "Token.h"
+#include "LinkedList.h"
 
 
 struct treeNode
 {
-    int      Key;
+    Token *data;
+    LinkedList *head;
     treeNode *left;
     treeNode *right;
 };
@@ -31,11 +33,8 @@ public:
     Tree();
     ~Tree();
     bool isEmpty();
-    treeNode *SearchTree(int Key);
-    int Insert(treeNode *newNode);
-    int Insert(int Key, float f, int i, char *cA);
-    int Delete(int Key);
-    void ClearTree(treeNode *T);
+    void addNode(Token *newToken);
+    void recursiveDeleteTree(treeNode *T);
 };
 
 

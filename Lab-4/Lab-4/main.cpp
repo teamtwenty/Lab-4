@@ -11,7 +11,7 @@
 #include "Scanner.h"
 #include "Token.h"
 #include "Tree.h"
-
+#include "LinkedList.h"
 FILE *init_lister(const char *name, char source_file_name[], char dte[]);
 void quit_scanner(FILE *src_file, Token *list);
 void add_token_to_list(Token *list, Token *new_token);
@@ -30,6 +30,8 @@ int main(int argc, const char * argv[])
     Print print(source_name, date);
     Scanner scanner(source_file, source_name, date, print);
     
+    Tree newTree;
+    
     do
     {
         token = scanner.getToken();
@@ -42,7 +44,11 @@ int main(int argc, const char * argv[])
     while (token->getCode() != PERIOD && token->getCode() != END_OF_FILE);
     
     delete token;
-    fclose(source_file);
+    fclose(source_file); 
+    
+    
+    
+    
     return 0;
 }
 FILE *init_lister(const char *name, char source_file_name[], char dte[])
