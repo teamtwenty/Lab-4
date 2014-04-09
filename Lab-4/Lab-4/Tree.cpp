@@ -20,7 +20,7 @@ Tree::~Tree()
 {
     
 }
-void Tree::recursivePrintTree(treeNode *node,Print print)
+void Tree::recursivePrintTree(treeNode *node,Print &print)
 {
     if(node->left!=NULL)
     {

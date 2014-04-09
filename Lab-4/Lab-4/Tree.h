@@ -35,7 +35,7 @@ public:
     ~Tree();
     bool isEmpty();
     void addNode(Token *newToken, int scannerLineNum);
-    void recursivePrintTree(treeNode *T, Print print);
+    void recursivePrintTree(treeNode *T, Print &print);
     treeNode* getRoot();
     void addLineNum(LinkedList *lineNum, int Num);
 };
