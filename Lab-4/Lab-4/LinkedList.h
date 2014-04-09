@@ -18,13 +18,15 @@ class LinkedList
 
 private:
     int lineNum;
-    LinkedList *node;
+    LinkedList *next;
 
 public:
     LinkedList();
     ~LinkedList();
     int getLineNum();
-    void setLineNum(int line);
+    LinkedList* getNext();
+    void setNext(LinkedList* newNext);
+    void setLineNum(int num);
 };
 
 

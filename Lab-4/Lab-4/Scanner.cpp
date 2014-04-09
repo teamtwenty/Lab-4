@@ -470,3 +470,7 @@ bool Scanner::isReservedWord(char *str, Token *tok)
     }
     return false;
 }
+int Scanner::getLineNum()
+{
+    return this->line_number;
+}

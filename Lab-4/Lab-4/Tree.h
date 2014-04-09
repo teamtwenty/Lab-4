@@ -33,8 +33,10 @@ public:
     Tree();
     ~Tree();
     bool isEmpty();
-    void addNode(Token *newToken);
+    void addNode(Token *newToken,LinkedList* lineNumber, int scannerLineNum);
     void recursiveDeleteTree(treeNode *T);
+    treeNode* getRoot();
+    void addLineNum(LinkedList *lineNum, int Num);
 };
 
 

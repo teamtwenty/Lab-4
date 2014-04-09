@@ -8,6 +8,7 @@
 
 #include "Tree.h"
 #include "Token.h"
+#include "Scanner.h"
 
 
 Tree::Tree()
@@ -31,8 +32,8 @@ bool Tree::isEmpty()
     return(root==NULL);
 }
 
-void Tree::addNode(Token *newToken)
-{
+void Tree::addNode(Token *newToken, LinkedList *lineNumber,int scannerLineNum)
+{    
     
     if(root == NULL)
     {
@@ -48,10 +49,12 @@ void Tree::addNode(Token *newToken)
                 if(current->left != NULL)
                 {
                     current = current->left;
+                    
                 }
                 else
                 {
                     current->left->data = newToken;
+                    addLineNum(lineNumber, scannerLineNum);
                     current = NULL;
                 }
             }
@@ -69,5 +72,19 @@ void Tree::addNode(Token *newToken)
             }
         }
     }
-    // Now attach the new node to the node that back points to
+}
+treeNode* Tree::getRoot()
+{
+    return this->root;
+}
+void Tree::addLineNum(LinkedList *lineNum,int Num)
+{
+    LinkedList *tmp = root->head;
+    while(tmp->getNext() != NULL)
+    {
+        tmp = tmp->getNext();
+    }
+    tmp->setNext(lineNum);
+    tmp->setLineNum(Num);
+    
 }

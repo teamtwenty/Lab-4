@@ -10,7 +10,7 @@
 
 LinkedList::LinkedList()
 {
-    node = NULL;
+    next = NULL;
 }
 LinkedList::~LinkedList()
 {
@@ -19,6 +19,14 @@ LinkedList::~LinkedList()
 int LinkedList::getLineNum()
 {
     return this->lineNum;
+}
+LinkedList* LinkedList::getNext()
+{
+    return this->next;
+}
+void LinkedList::setNext(LinkedList* newNext)
+{
+    this->next = newNext;
 }
 void LinkedList::setLineNum(int num)
 {

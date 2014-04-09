@@ -31,18 +31,24 @@ int main(int argc, const char * argv[])
     Scanner scanner(source_file, source_name, date, print);
     
     Tree newTree;
+    LinkedList *list;
     
     do
     {
         token = scanner.getToken();
-        print.printToken(token);
-        if (token->getCode() != PERIOD && token->getCode() != END_OF_FILE)
+        if (token->getCode() == IDENTIFIER)
+        {
+            newTree.addNode(token, list, scanner.getLineNum());
+            print.printToken(token);
+        }
+        else
         {
             delete token;
         }
     }
     while (token->getCode() != PERIOD && token->getCode() != END_OF_FILE);
     
+    newTree.recursiveDeleteTree(newTree.getRoot());
     delete token;
     fclose(source_file); 
     
