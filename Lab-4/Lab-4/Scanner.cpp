@@ -7,6 +7,7 @@
 
 #include "Scanner.h"
 #include "Print.h"
+#include <stdlib.h>
 
 typedef struct
 {

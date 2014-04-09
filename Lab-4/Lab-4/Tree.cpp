@@ -11,20 +11,21 @@
 #include "Scanner.h"
 
 
+
 Tree::Tree()
 {
     root = NULL;
 }
 Tree::~Tree()
 {
-    recursiveDeleteTree(root);
+    recursivePrintTree(root);
 }
-void Tree::recursiveDeleteTree(treeNode *node)
+void Tree::recursivePrintTree(treeNode *node)
 {
     if(node->left!=NULL)
-        recursiveDeleteTree(node->left);// clear left node
+        recursivePrintTree(node->left);// clear left node
     if(node->right!= NULL)
-        recursiveDeleteTree(node->right);// Clear right node
+        recursivePrintTree(node->right);// Clear right node
     delete node;    // Destroy this node
 }
 bool Tree::isEmpty()
@@ -32,8 +33,10 @@ bool Tree::isEmpty()
     return(root==NULL);
 }
 
-void Tree::addNode(Token *newToken, LinkedList *lineNumber,int scannerLineNum)
-{    
+void Tree::addNode(Token *newToken, int scannerLineNum)
+{
+    LinkedList *lineNumber = new LinkedList();
+    lineNumber->setLineNum(scannerLineNum);
     
     if(root == NULL)
     {
