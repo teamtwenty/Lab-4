@@ -51,7 +51,7 @@ int main(int argc, const char * argv[])
     //newTree.recursiveDeleteTree(newTree.getRoot());
     while(!newTree.isEmpty())
     {
-        
+        newTree.recursivePrintTree(newTree.getRoot(),print);
     }
     delete token;
     fclose(source_file);

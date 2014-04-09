@@ -18,14 +18,19 @@ Tree::Tree()
 }
 Tree::~Tree()
 {
-    recursivePrintTree(root);
+    
 }
-void Tree::recursivePrintTree(treeNode *node)
+void Tree::recursivePrintTree(treeNode *node,Print print)
 {
     if(node->left!=NULL)
-        recursivePrintTree(node->left);// clear left node
+    {
+        recursivePrintTree(node->left, print);// clear left node
+    }
     if(node->right!= NULL)
-        recursivePrintTree(node->right);// Clear right node
+    {
+        recursivePrintTree(node->right, print);// Clear right node
+    }
+    print.printToken(node->data);
     delete node;    // Destroy this node
 }
 bool Tree::isEmpty()
