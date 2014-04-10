@@ -9,11 +9,15 @@
 
 Token::Token()
 {
-    Token newToken;//What code do I need here to initialize everything.
+    code = (TokenCode)NULL;
+    type = (LiteralType)NULL;
+    //literal = NULL;
+    tokenString = "";
+    
 }
 Token::~Token()
 {
-    delete this; //What code do I need here to free memory
+    free(this); //What code do I need here to free memory
 }
 void Token::setCode(TokenCode newCode)
 {

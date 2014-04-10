@@ -57,6 +57,12 @@
             ReferencedContainer = "container:Lab-4.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "/Users/maxxrodriguez/Lab-4/Lab-4/Lab-4/NEWTON.PAS"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
