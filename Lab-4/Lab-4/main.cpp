@@ -30,28 +30,28 @@ int main(int argc, const char * argv[])
     Print print(source_name, date);
     Scanner scanner(source_file, source_name, date, print);
     
-    Tree newTree;
+    Tree newTree;//create tree
     
     do
     {
         token = scanner.getToken();
         print.printToken(token);
 
-        if (token->getCode() == IDENTIFIER)
+        if (token->getCode() == IDENTIFIER)//check if it is an identifier
         {
-            newTree.addNode(token, scanner.getLineNum());
+            newTree.addNode(token, scanner.getLineNum());//if identifier, add to tree
         }
         else if (token->getCode() != PERIOD && token->getCode() != END_OF_FILE)
         {
-            delete token;
+            delete token;//if not, delete token
         }
     }
-    while (token->getCode() != PERIOD && token->getCode() != END_OF_FILE);
+    while (token->getCode() != PERIOD && token->getCode() != END_OF_FILE);//scan until end of file
     
     //newTree.recursiveDeleteTree(newTree.getRoot());
     while(!newTree.isEmpty())
     {
-        newTree.recursivePrintTree(newTree.getRoot(),print);
+        newTree.recursivePrintTree(newTree.getRoot(),print);//recursively print tree
     }
     delete token;
     fclose(source_file);
