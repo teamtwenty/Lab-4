@@ -8,27 +8,27 @@
 
 #include "LinkedList.h"
 
-LinkedList::LinkedList()
+LinkedList::LinkedList()//constructor
 {
     next = NULL;
 }
-LinkedList::~LinkedList()
+LinkedList::~LinkedList()//deconstructor
 {
     delete this;
 }
-int LinkedList::getLineNum()
+int LinkedList::getLineNum()//return line number
 {
     return this->lineNum;
 }
-LinkedList* LinkedList::getNext()
+LinkedList* LinkedList::getNext()//return the next node in list
 {
     return this->next;
 }
-void LinkedList::setNext(LinkedList* newNext)
+void LinkedList::setNext(LinkedList* newNext)//set the next node in the list
 {
     this->next = newNext;
 }
-void LinkedList::setLineNum(int num)
+void LinkedList::setLineNum(int num)//assign line number
 {
     this->lineNum = num;
 }
