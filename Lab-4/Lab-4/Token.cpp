@@ -7,7 +7,7 @@
 
 #include "Token.h"
 
-Token::Token()
+Token::Token()//constructor creates a default token
 {
     code = (TokenCode)NULL;
     type = (LiteralType)NULL;
@@ -17,54 +17,54 @@ Token::Token()
 }
 Token::~Token()
 {
-    free(this); //What code do I need here to free memory
+    free(this); //deconstructor frees memory
 }
-void Token::setCode(TokenCode newCode)
+void Token::setCode(TokenCode newCode)//apply code to node
 {
     this->code = newCode;
 }
-TokenCode Token::getCode()
+TokenCode Token::getCode()//retreive code 
 {
     return this->code;
 }
-void Token::setType(LiteralType newType)
+void Token::setType(LiteralType newType)//signify the type
 {
     this->type = newType;
 }
-LiteralType Token::getType()
+LiteralType Token::getType()//retrieve the type
 {
     return this->type;
 }
-void Token::setLiteral(int newInteger)
+void Token::setLiteral(int newInteger)//fill literal with the passed integer
 {
     this->literal.integer = newInteger;
 }
-int Token::getIntLiteral()
+int Token::getIntLiteral()//retrieve literal
 {
     return this->literal.integer;
 }
-void Token::setLiteral(float newReal)
+void Token::setLiteral(float newReal)//set literal with float
 {
     this->literal.real = newReal;
 }
-float Token::getRealLiteral()
+float Token::getRealLiteral()//retrieve that float literal
 {
     return this->literal.real;
 }
-void Token::setLiteral(string newString)
+void Token::setLiteral(string newString)//set literal with string
 {
     this->literal.stringLiteral = (char*)malloc(sizeof(char) * newString.length() + 1);
     strcpy(this->literal.stringLiteral, newString.c_str());
 }
-string Token::getStringLiteral()
+string Token::getStringLiteral()//get the stringliteral
 {
     return string(this->literal.stringLiteral);
 }
-void Token::setTokenString(string s)
+void Token::setTokenString(string s)//set string
 {
     this->tokenString = s;
 }
-string Token::getTokenString()
+string Token::getTokenString()//get string
 {
     return this->tokenString;
 }
